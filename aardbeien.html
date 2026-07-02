@@ -3,235 +3,324 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Waarom kost een aardbei van het veld het dubbele van die in de supermarkt?</title>
-<meta name="description" content="Van 8,98 tot 18 euro per kilo: waarom Belgische aardbeien zo verschillend geprijsd zijn — een samenvatting van het prijsverschil tussen supermarkt en korte keten.">
+<title>Belgische aardbeien rechtstreeks van het veld kosten dubbel zoveel als een bakje in de supermarkt: hoe komt dat toch?</title>
+<meta name="description" content="Soms kost een bakje Belgische aardbeien minder dan 3 euro, soms bijna 10 euro. Wat gaat er schuil achter de prijsverschillen van het populaire zomerfruit?">
 <style>
   :root{
     --rood:#d0202e;
-    --rood-donker:#9e1622;
-    --groen:#1d6b2e;
-    --inkt:#22201e;
-    --grijs:#6b6560;
-    --papier:#faf7f2;
-    --kaart:#ffffff;
-    --lijn:#e8e1d8;
+    --inkt:#131313;
+    --grijs:#65605b;
+    --lijn:#131313;
+    --groen-bg:#e0ffe0;
+    --groen-tekst:#016302;
+    --banner-bg:#f4efe6;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
   body{
+    background:#fff;
+    color:var(--inkt);
     font-family:Georgia,'Times New Roman',serif;
-    background:var(--papier);
-    color:var(--inkt);
-    line-height:1.65;
+    padding-bottom:12.5rem;
   }
-  .kicker,.credit,.byline,figcaption,.prijskaart,.footnote,nav{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+
+  /* ── header ── */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;
   }
-  header.hero{
-    background:linear-gradient(160deg,#123c1c 0%,#1d6b2e 55%,#2f8a41 100%);
-    color:#fff;
-    padding:3.5rem 1.25rem 3rem;
+  .site-inner{
+    max-width:40rem;margin:0 auto;
+    display:flex;align-items:center;gap:.9rem;
+    padding:.9rem 1rem;
+  }
+  .icon-btn{background:none;border:none;padding:.2rem;line-height:0;cursor:pointer;color:var(--inkt)}
+  .logo{
+    font-family:'Times New Roman',Times,Georgia,serif;
+    font-weight:700;font-size:2.1rem;line-height:1;
+    letter-spacing:-.02em;color:#000;text-decoration:none;
+    margin-right:auto;
+  }
+  .abonneer{
+    background:var(--rood);color:#fff;border:none;
+    font-size:1.05rem;font-weight:500;
+    padding:.55rem 1.15rem;border-radius:2px;cursor:pointer;
+  }
+
+  /* ── groene abonnee-balk ── */
+  .gratis-balk{
+    background:var(--groen-bg);color:var(--groen-tekst);
+    text-align:center;font-size:.95rem;
+    padding:.65rem 1rem;
+  }
+  .gratis-balk b{font-weight:700}
+
+  /* ── artikel ── */
+  main{max-width:40rem;margin:0 auto}
+  .hero img{width:100%;height:auto;display:block}
+  .credit{
+    color:var(--grijs);font-size:.95rem;
+    padding:.6rem 1rem 0;
+  }
+  .artikel-kop{padding:1rem 1rem 0}
+  .kicker{
+    color:#6e655c;font-weight:700;font-size:.95rem;
+    letter-spacing:.04em;text-transform:uppercase;
+    margin:.9rem 0 .6rem;
+  }
+  h1{
+    font-size:2rem;line-height:1.18;font-weight:700;
+    margin:0 0 1.1rem;
+  }
+  h1 .plus{
+    display:inline-block;vertical-align:.15em;
+    width:.85em;height:.85em;margin-right:.25em;
+    border:2px solid #4a453f;border-radius:3px;
+    position:relative;
+  }
+  h1 .plus::before,h1 .plus::after{
+    content:"";position:absolute;background:#4a453f;
+  }
+  h1 .plus::before{left:50%;top:18%;bottom:18%;width:2px;transform:translateX(-50%)}
+  h1 .plus::after{top:50%;left:18%;right:18%;height:2px;transform:translateY(-50%)}
+  .standfirst{
+    font-size:1.35rem;line-height:1.45;color:#1e1e1e;
+    margin-bottom:1.4rem;
+  }
+  .byline{font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+  .datum{color:var(--grijs);font-size:1.05rem;margin-bottom:1.2rem}
+  .actie-rij{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+  .actie-knop{
+    display:inline-flex;align-items:center;gap:.45rem;
+    background:#fff;border:1px solid var(--lijn);
+    font-size:1.05rem;padding:.6rem 1.1rem;cursor:pointer;color:var(--inkt);
+  }
+  .google-pill{
+    display:inline-flex;align-items:center;gap:.5rem;
+    border:1.5px solid #4a6fd4;border-radius:999px;
+    color:#1a55c4;font-weight:600;font-size:1.05rem;
+    padding:.55rem 1.2rem;margin-bottom:1.6rem;cursor:pointer;background:#fff;
+  }
+
+  /* ── body ── */
+  .artikel-body{padding:0 1rem}
+  .artikel-body p{
+    font-size:1.22rem;line-height:1.55;
+    margin:0 0 1.5rem;
+  }
+  .artikel-body h2{
+    font-size:1.25rem;font-weight:700;
+    margin:1.8rem 0 .7rem;
+  }
+  figure.inline{margin:1.8rem -1rem}
+  figure.inline img{width:100%;height:auto;display:block}
+  figure.inline figcaption{
+    color:var(--grijs);font-size:.95rem;padding:.55rem 1rem 0;
+  }
+
+  /* ── infographic (prijsvergelijker) ── */
+  .prijsvergelijker{
+    margin:2rem auto;max-width:24rem;text-align:center;
+  }
+  .prijsvergelijker .kolommen{
+    display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+  }
+  .pv-kop{font-weight:700;font-size:1.15rem;margin-bottom:.9rem}
+  .pv-winkel{font-size:1rem;line-height:1.4;margin-bottom:1rem}
+  .pv-prijs{color:var(--rood);font-size:2.6rem;font-weight:600;line-height:1}
+  .pv-eenheid{font-size:.95rem;margin:.2rem 0 1rem}
+  .pv-kilo{font-size:2rem;font-weight:600;line-height:1}
+  .pv-kilo-label{font-size:.95rem;margin-top:.2rem}
+  .pv-streep{width:2px;height:2rem;background:#131313;margin:.9rem auto .6rem}
+  .pv-noot{font-style:italic;font-size:1.05rem;line-height:1.45;margin-bottom:.9rem}
+  .pv-voetnoot{font-size:1rem}
+
+  /* ── lees ook ── */
+  .lees-ook{
+    border-left:2px solid #131313;
+    padding:.2rem 0 .2rem 1rem;
+    margin:2.2rem 0 1.8rem;
+    display:flex;gap:1rem;align-items:flex-start;
+  }
+  .lees-ook .tekst{flex:1}
+  .lees-ook .label{font-weight:700;font-size:1.05rem;margin-bottom:.5rem}
+  .lees-ook .teaser{font-size:1.2rem;line-height:1.4}
+  .lees-ook img{width:6.5rem;height:4.3rem;object-fit:cover;flex-shrink:0}
+
+  /* ── tags ── */
+  .tags{display:flex;flex-wrap:wrap;gap:.75rem;padding:0 1rem;margin-bottom:1.6rem}
+  .tags a{
+    border:1px solid var(--lijn);color:var(--inkt);text-decoration:none;
+    font-size:1.05rem;padding:.55rem 1rem;background:#fff;
+  }
+  .fout{
+    background:#f0efed;margin:0 1rem 2rem;padding:.8rem 1rem;font-size:.9rem;
+  }
+  .fout a{color:var(--inkt)}
+  .verantwoording{
+    color:var(--grijs);font-size:.9rem;padding:0 1rem 2rem;
+  }
+
+  /* ── abonnementsbanner ── */
+  .abo-banner{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--banner-bg);
     text-align:center;
+    padding:1.1rem 1rem 1.3rem;
+    box-shadow:0 -2px 12px rgba(0,0,0,.08);
   }
-  .hero .kicker{
-    display:inline-block;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    font-size:.75rem;
-    font-weight:700;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.35);
-    padding:.35rem .9rem;
-    border-radius:999px;
-    margin-bottom:1.25rem;
+  .abo-banner p{
+    font-size:1.3rem;line-height:1.35;max-width:38rem;margin:0 auto .9rem;
   }
-  .hero h1{
-    font-size:clamp(1.7rem,4.5vw,2.9rem);
-    line-height:1.2;
-    max-width:52rem;
-    margin:0 auto .9rem;
-    font-weight:700;
+  .abo-banner .abo-knop{
+    display:block;max-width:36rem;margin:0 auto;
+    background:#000;color:#fff;border:none;
+    font-size:1.25rem;padding:.85rem 1rem;cursor:pointer;width:100%;
   }
-  .hero p.intro{
-    max-width:40rem;
-    margin:0 auto;
-    font-size:1.1rem;
-    color:#e9f5ec;
-    font-style:italic;
-  }
-  main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 3rem}
-  article p{margin:0 0 1.15rem;font-size:1.06rem}
-  h2{
-    font-size:1.45rem;
-    color:var(--groen);
-    margin:2.2rem 0 .8rem;
-    line-height:1.3;
-  }
-  figure{margin:2rem 0}
-  figure img{
-    width:100%;
-    height:auto;
-    display:block;
-    border-radius:10px;
-    box-shadow:0 10px 30px rgba(34,32,30,.18);
-  }
-  figcaption{
-    font-size:.85rem;
-    color:var(--grijs);
-    margin-top:.55rem;
-    text-align:center;
-  }
-  /* prijsvergelijking */
-  .vergelijk{
-    background:var(--kaart);
-    border:1px solid var(--lijn);
-    border-radius:14px;
-    padding:1.75rem 1.25rem 1.25rem;
-    margin:2.25rem 0;
-    box-shadow:0 6px 24px rgba(34,32,30,.07);
-  }
-  .vergelijk h3{
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-    text-align:center;
-    font-size:1rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--grijs);
-    margin-bottom:1.25rem;
-  }
-  .prijzen{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1rem;
-  }
-  @media (max-width:520px){.prijzen{grid-template-columns:1fr}}
-  .prijskaart{
-    border:1px solid var(--lijn);
-    border-radius:10px;
-    padding:1.25rem 1rem;
-    text-align:center;
-    background:linear-gradient(180deg,#fff 0%,#fdf9f5 100%);
-  }
-  .prijskaart .winkel{
-    font-weight:700;
-    font-size:1.05rem;
-    margin-bottom:.15rem;
-  }
-  .prijskaart .type{
-    font-size:.85rem;
-    color:var(--grijs);
-    margin-bottom:1rem;
-  }
-  .prijskaart .prijs{
-    font-size:2.4rem;
-    font-weight:800;
-    color:var(--rood);
-    line-height:1;
-  }
-  .prijskaart .eenheid{
-    font-size:.85rem;
-    color:var(--inkt);
-    margin:.3rem 0 1rem;
-  }
-  .prijskaart .kilo{
-    font-size:1.5rem;
-    font-weight:800;
-    color:var(--inkt);
-    line-height:1;
-  }
-  .prijskaart .kilo-label{font-size:.8rem;color:var(--grijs);margin-top:.25rem}
-  .vergelijk .footnote{
-    font-size:.78rem;
-    color:var(--grijs);
-    text-align:center;
-    margin-top:1.1rem;
-    font-style:italic;
-  }
-  blockquote{
-    border-left:4px solid var(--rood);
-    padding:.35rem 0 .35rem 1.1rem;
-    margin:1.75rem 0;
-    font-size:1.2rem;
-    font-style:italic;
-    color:var(--rood-donker);
-  }
-  .bron{
-    margin-top:2.75rem;
-    padding-top:1.25rem;
-    border-top:1px solid var(--lijn);
-    font-size:.88rem;
-    color:var(--grijs);
-  }
-  nav.terug{max-width:46rem;margin:0 auto;padding:1rem 1.25rem 2.5rem}
-  nav.terug a{color:var(--groen);font-weight:600;text-decoration:none;font-size:.9rem}
-  nav.terug a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <span class="kicker">Het prijsverschil</span>
-  <h1>Waarom kost een aardbei van het veld het dubbele van die in de supermarkt?</h1>
-  <p class="intro">Een bakje Belgische aardbeien kost soms geen 3&nbsp;euro, soms bijna 10. Achter dat verschil zit geen toeval, maar een heel verschillende manier van telen en verkopen.</p>
+<header class="site sans">
+  <div class="site-inner">
+    <button class="icon-btn" aria-label="Menu en zoeken">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="12" y2="6"/>
+        <line x1="3" y1="11" x2="9" y2="11"/>
+        <circle cx="15" cy="12" r="6"/>
+        <line x1="19.5" y1="16.5" x2="24" y2="21"/>
+      </svg>
+    </button>
+    <a class="logo" href="index.html" aria-label="De Standaard">DS</a>
+    <button class="abonneer">Abonneer</button>
+    <button class="icon-btn" aria-label="Inloggen">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="13" cy="9" r="4"/>
+        <path d="M4.5 22c1.5-4 5-6 8.5-6s7 2 8.5 6"/>
+      </svg>
+    </button>
+  </div>
 </header>
+
+<div class="gratis-balk">Dit artikel is exclusief voor abonnees, maar we bieden het je <b>gratis</b> aan. Zo kan je kennismaken met De Standaard.</div>
 
 <main>
 <article>
 
-  <figure>
-    <img src="assets/aardbeien-struik.jpg" alt="Verse aardbeien opgehangen tussen de takken van een rozemarijnstruik, versierd met blauwe kralensnoeren" width="720" height="1080">
-    <figcaption>Volle zomer: hét moment voor Belgische aardbeien.</figcaption>
+  <figure class="hero">
+    <img src="assets/aardbeien-struik.jpg" alt="Aardbeien opgehangen in een rozemarijnstruik met blauwe kralensnoeren" width="720" height="1080">
   </figure>
+  <p class="credit sans">© Kaat Pype</p>
 
-  <p>Het is volop aardbeienseizoen, en dankzij de zonnige weken zijn de vruchten nu op hun goedkoopst. Toch loopt de prijs van een bakje Belgische aardbeien sterk uiteen, afhankelijk van waar je het koopt. Hoe kan fruit dat in hetzelfde land aan bijna dezelfde plant groeit, zó verschillend geprijsd zijn? Deze pagina zet de belangrijkste verklaringen op een rij, gebaseerd op een reportage van <em>De Standaard</em>.</p>
+  <div class="artikel-kop">
+    <p class="kicker sans">Het prijsverschil</p>
+    <h1><span class="plus" aria-hidden="true"></span>Belgische aardbeien rechtstreeks van het veld kosten dubbel zoveel als een bakje in de supermarkt: hoe komt dat toch?</h1>
+    <p class="standfirst">Soms kost een bakje Belgische aardbeien minder dan 3 euro, soms bijna 10 euro. Wat gaat er schuil achter de prijsverschillen van het populaire zomerfruit?</p>
+    <p class="byline sans">Eva Kestemont</p>
+    <p class="datum sans">1 juli 2026 om 10:00</p>
 
-  <div class="vergelijk">
-    <h3>Aardbeien: supermarkt vs. korte keten</h3>
-    <div class="prijzen">
-      <div class="prijskaart">
-        <div class="winkel">Aldi</div>
-        <div class="type">supermarkt</div>
-        <div class="prijs">4,49</div>
-        <div class="eenheid">euro per 500&nbsp;gram</div>
-        <div class="kilo">8,98</div>
-        <div class="kilo-label">euro per kilo*</div>
-      </div>
-      <div class="prijskaart">
-        <div class="winkel">Veldwinkel Kempengoud</div>
-        <div class="type">bioboerderij, korte keten</div>
-        <div class="prijs">4,50</div>
-        <div class="eenheid">euro per 250&nbsp;gram</div>
-        <div class="kilo">18</div>
-        <div class="kilo-label">euro per kilo*</div>
-      </div>
+    <div class="actie-rij sans">
+      <button class="actie-knop">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="10" cy="10" r="8"/>
+          <path d="M8 6.5v7l5.5-3.5z" fill="currentColor" stroke="none"/>
+        </svg>
+        Luisteren
+      </button>
+      <button class="actie-knop">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="5" cy="10" r="2.2"/><circle cx="15" cy="4.5" r="2.2"/><circle cx="15" cy="15.5" r="2.2"/>
+          <line x1="7" y1="9" x2="13" y2="5.5"/><line x1="7" y1="11" x2="13" y2="14.5"/>
+        </svg>
+        Delen
+      </button>
     </div>
-    <p class="footnote">*Prijzen genoteerd op 22&nbsp;juni. In omliggende winkels komt er nog een winkelmarge bij; online betaal je vaak ook een servicekost.</p>
+
+    <button class="google-pill sans">
+      <svg width="20" height="20" viewBox="0 0 48 48">
+        <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.7 2.4 30.2 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.2 17.7 9.5 24 9.5z"/>
+        <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.5-4.1 7-10.2 7-17.6z"/>
+        <path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6z"/>
+        <path fill="#34A853" d="M24 48c6.2 0 11.4-2 15.5-5.9l-7.6-5.9c-2.1 1.4-4.8 2.3-7.9 2.3-6.3 0-11.6-3.7-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+      </svg>
+      Maak ons je Google-favoriet!
+    </button>
   </div>
 
-  <h2>Serre versus veld</h2>
-  <p>Het grootste deel van de supermarktaardbeien groeit niet in volle grond, maar op verhoogde stellingen met substraat in serres. De investering in zo'n serre is fors, maar daarna is de teelt bijzonder efficiënt: gecontroleerde omstandigheden, een hogere opbrengst en comfortabeler plukwerk. Een biologische veldteler zoals Kempengoud werkt daarentegen verplicht in de grond, mag amper bestrijdingsmiddelen of kunstmest gebruiken en haalt daardoor een veel kleinere oogst van dezelfde oppervlakte.</p>
+  <div class="artikel-body">
+    <p>Dit is hét moment voor aardbeien: dankzij de zonnige dagen zijn ze nu het goedkoopst. Toch lopen de prijzen voor Belgische aardbeien soms flink uiteen — fruit uit de korte keten kost al snel het dubbele van een bakje uit de supermarkt. Hoe kunnen twee vruchten die in hetzelfde land aan een gelijkaardige plant groeien zo verschillend geprijsd zijn?</p>
 
-  <h2>Elk vruchtje door mensenhanden</h2>
-  <p>Of ze nu uit de serre of van het veld komen: aardbeien blijven arbeidsintensief. Elke plant vraagt verzorging en elke vrucht wordt met de hand geplukt en gesorteerd. Bij een kleine bioboerderij weegt die loonkost per kilo zwaarder door dan bij grote telers die met ervaren seizoenarbeiders aan hoog tempo oogsten.</p>
+    <div class="prijsvergelijker sans">
+      <div class="kolommen">
+        <div>
+          <div class="pv-kop">Aardbeien</div>
+          <div class="pv-winkel">Te koop bij<br>Aldi</div>
+          <div class="pv-prijs">4,49</div>
+          <div class="pv-eenheid">euro per 500 gram</div>
+          <div class="pv-kilo">8,98</div>
+          <div class="pv-kilo-label">euro per kilo*</div>
+        </div>
+        <div>
+          <div class="pv-kop">Aardbeien</div>
+          <div class="pv-winkel">Te koop bij<br>Veldwinkel<br>Kempengoud</div>
+          <div class="pv-prijs">4,50</div>
+          <div class="pv-eenheid">euro per 250 gram</div>
+          <div class="pv-kilo">18</div>
+          <div class="pv-kilo-label">euro per kilo*</div>
+        </div>
+      </div>
+      <div class="pv-streep"></div>
+      <p class="pv-noot">In omliggende winkels komt er nog een marge voor de winkel zelf bij, online moet je rekening houden met een servicekost</p>
+      <p class="pv-voetnoot">*Prijzen genoteerd op 22 juni</p>
+    </div>
 
-  <figure>
-    <img src="assets/aardbeien-duo.jpg" alt="Twee rijpe aardbeien hangend aan blauwe kralensnoeren tussen groene rozemarijntakken" width="720" height="480">
-    <figcaption>Met de hand geplukt en gesorteerd: dat zie je terug in de prijs.</figcaption>
-  </figure>
+    <h2>Substraat in plaats van aarde</h2>
+    <p>We beginnen bij de boerderij. De meeste supermarktaardbeien groeien niet in volle grond, maar op verhoogde installaties met substraat in serres. De investering in zo'n serre is fors, maar daarna is de teelt uiterst efficiënt: de omstandigheden zijn er veel beter te controleren en de opbrengst ligt een stuk hoger.</p>
+    <p>Op de biologische boerderij Kempengoud in Essen gaat het anders. Boer Gijs Van den Bleeken werkt verplicht in de grond, mag amper bestrijdingsmiddelen of kunstmest gebruiken en haalt daardoor een veel kleinere oogst van dezelfde oppervlakte. De keuze voor bio brengt bovendien extra kosten met zich mee.</p>
 
-  <h2>Minder tussenschakels, niet minder kosten</h2>
-  <p>Je zou verwachten dat rechtstreeks kopen bij de boer goedkoper is: er hoeven toch minder schakels betaald te worden? In de praktijk klopt dat niet automatisch. Kosten voor plantgoed, verpakking, transport en verkoop die een veiling of supermarktketen over duizenden tonnen kan uitsmeren, draagt een kleine producent met een hoevewinkel grotendeels zelf.</p>
+    <h2>Met de hand geplukt</h2>
+    <p>Of ze nu uit de serre of van het veld komen: aardbeien blijven arbeidsintensief. Elke plant vraagt verzorging en elke vrucht wordt met de hand geplukt en gesorteerd. Bij een kleine bioboerderij weegt die loonkost per kilo zwaarder door dan bij grote telers die met ervaren seizoenarbeiders aan hoog tempo oogsten.</p>
 
-  <blockquote>"Onze klanten hechten minder belang aan vorm, maar komen voor de smaak", zegt bioboer Gijs Van den Bleeken.</blockquote>
+    <figure class="inline">
+      <img src="assets/aardbeien-duo.jpg" alt="Twee aardbeien aan blauwe kralensnoeren tussen rozemarijntakken" width="720" height="480">
+      <figcaption class="sans">© Kaat Pype</figcaption>
+    </figure>
 
-  <h2>Het hele jaar rond, en de wet van vraag en aanbod</h2>
-  <p>Steeds meer telers laten hun dure serres het hele jaar renderen, ook al lopen de energiekosten voor verwarming en verlichting in de wintermaanden hoog op. In volle zomer groeien de aardbeien daarentegen welig en speelt vraag en aanbod volop: bij een groot aanbod zakken de prijzen. Supermarkten zetten de rode vruchten bovendien geregeld in promotie, zeker rond Moederdag. Een korteketenbedrijf houdt zijn prijs liever het hele seizoen stabiel — en de bioboer die zijn eigen verkoop regelt, houdt naar eigen schatting een gangbaar loon over.</p>
+    <p>Ook inbegrepen in de prijs van je bakje: plantgoed, verpakking en transport. Minder tussenschakels betekent daarbij niet automatisch een lagere prijs. Kosten die een coöperatie of supermarktketen over duizenden tonnen kan spreiden, moet een kleine producent met een hoevewinkel grotendeels zelf dragen. "Onze klanten hechten minder belang aan vorm, maar komen voor de smaak", zegt Van den Bleeken over de eenvoudige kartonnen doosjes zonder Europese kwaliteitsklasse.</p>
 
-  <p class="bron">Deze pagina is een eigen samenvatting van het artikel <em>"Belgische aardbeien rechtstreeks van het veld kosten dubbel zoveel als een bakje in de supermarkt: hoe komt dat toch?"</em>, De Standaard, 1&nbsp;juli&nbsp;2026 (rubriek Het Prijsverschil). Prijsgegevens uit de bijbehorende prijsvergelijker van 22&nbsp;juni.</p>
+    <h2>Het hele jaar rond</h2>
+    <p>Steeds meer telers laten hun dure serres het hele jaar renderen, ook al lopen de energiekosten in de koude maanden hoog op. In volle zomer speelt vooral vraag en aanbod: bij een groot aanbod zakken de prijzen op de veilingen. Supermarkten zetten de rode vruchten bovendien geregeld in promotie, zeker rond Moederdag.</p>
+    <p>Kempengoud houdt zijn prijs liever het hele seizoen stabiel, en ook Aldi zegt de consumentenprijs zo vlak mogelijk te houden. En de bioboer die zijn eigen verkoop regelt? Die schat dat hij na alle kosten en lonen zo'n 4 euro per kilogram overhoudt. "In een goed seizoen brengen aardbeien iets op."</p>
+
+    <div class="lees-ook">
+      <div class="tekst">
+        <p class="label sans">LEES OOK</p>
+        <p class="teaser">Hoe houden aardbeienkraampjes stand? "De supermarkten verkopen onder de prijs, maar hun fruit smaakt dan ook waterig"</p>
+      </div>
+      <img src="assets/aardbeien-duo.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="tags sans">
+    <a href="#">Inspiratie</a>
+    <a href="#">De helpdesk</a>
+    <a href="#">Het prijsverschil</a>
+    <a href="#">Fruitsector</a>
+  </div>
+
+  <p class="fout sans"><a href="#">Fout gezien? Meld het ons hier</a></p>
+
+  <p class="verantwoording sans">Samenvatting van het artikel van Eva Kestemont, De Standaard, 1 juli 2026 (Het Prijsverschil).</p>
 
 </article>
 </main>
 
-<nav class="terug"><a href="index.html">&larr; Terug naar de startpagina</a></nav>
+<div class="abo-banner">
+  <p>Met een abonnement draag je bij aan onze missie om je betrouwbaar nieuws te brengen.</p>
+  <button class="abo-knop sans">Abonneer nu</button>
+</div>
 
 </body>
 </html>
