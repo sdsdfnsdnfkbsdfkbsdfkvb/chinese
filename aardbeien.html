@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waarom kost een aardbei van het veld het dubbele van die in de supermarkt?</title>
+<meta name="description" content="Van 8,98 tot 18 euro per kilo: waarom Belgische aardbeien zo verschillend geprijsd zijn — een samenvatting van het prijsverschil tussen supermarkt en korte keten.">
+<style>
+  :root{
+    --rood:#d0202e;
+    --rood-donker:#9e1622;
+    --groen:#1d6b2e;
+    --inkt:#22201e;
+    --grijs:#6b6560;
+    --papier:#faf7f2;
+    --kaart:#ffffff;
+    --lijn:#e8e1d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--papier);
+    color:var(--inkt);
+    line-height:1.65;
+  }
+  .kicker,.credit,.byline,figcaption,.prijskaart,.footnote,nav{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  header.hero{
+    background:linear-gradient(160deg,#123c1c 0%,#1d6b2e 55%,#2f8a41 100%);
+    color:#fff;
+    padding:3.5rem 1.25rem 3rem;
+    text-align:center;
+  }
+  .hero .kicker{
+    display:inline-block;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-size:.75rem;
+    font-weight:700;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);
+    padding:.35rem .9rem;
+    border-radius:999px;
+    margin-bottom:1.25rem;
+  }
+  .hero h1{
+    font-size:clamp(1.7rem,4.5vw,2.9rem);
+    line-height:1.2;
+    max-width:52rem;
+    margin:0 auto .9rem;
+    font-weight:700;
+  }
+  .hero p.intro{
+    max-width:40rem;
+    margin:0 auto;
+    font-size:1.1rem;
+    color:#e9f5ec;
+    font-style:italic;
+  }
+  main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 3rem}
+  article p{margin:0 0 1.15rem;font-size:1.06rem}
+  h2{
+    font-size:1.45rem;
+    color:var(--groen);
+    margin:2.2rem 0 .8rem;
+    line-height:1.3;
+  }
+  figure{margin:2rem 0}
+  figure img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(34,32,30,.18);
+  }
+  figcaption{
+    font-size:.85rem;
+    color:var(--grijs);
+    margin-top:.55rem;
+    text-align:center;
+  }
+  /* prijsvergelijking */
+  .vergelijk{
+    background:var(--kaart);
+    border:1px solid var(--lijn);
+    border-radius:14px;
+    padding:1.75rem 1.25rem 1.25rem;
+    margin:2.25rem 0;
+    box-shadow:0 6px 24px rgba(34,32,30,.07);
+  }
+  .vergelijk h3{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    text-align:center;
+    font-size:1rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--grijs);
+    margin-bottom:1.25rem;
+  }
+  .prijzen{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+  }
+  @media (max-width:520px){.prijzen{grid-template-columns:1fr}}
+  .prijskaart{
+    border:1px solid var(--lijn);
+    border-radius:10px;
+    padding:1.25rem 1rem;
+    text-align:center;
+    background:linear-gradient(180deg,#fff 0%,#fdf9f5 100%);
+  }
+  .prijskaart .winkel{
+    font-weight:700;
+    font-size:1.05rem;
+    margin-bottom:.15rem;
+  }
+  .prijskaart .type{
+    font-size:.85rem;
+    color:var(--grijs);
+    margin-bottom:1rem;
+  }
+  .prijskaart .prijs{
+    font-size:2.4rem;
+    font-weight:800;
+    color:var(--rood);
+    line-height:1;
+  }
+  .prijskaart .eenheid{
+    font-size:.85rem;
+    color:var(--inkt);
+    margin:.3rem 0 1rem;
+  }
+  .prijskaart .kilo{
+    font-size:1.5rem;
+    font-weight:800;
+    color:var(--inkt);
+    line-height:1;
+  }
+  .prijskaart .kilo-label{font-size:.8rem;color:var(--grijs);margin-top:.25rem}
+  .vergelijk .footnote{
+    font-size:.78rem;
+    color:var(--grijs);
+    text-align:center;
+    margin-top:1.1rem;
+    font-style:italic;
+  }
+  blockquote{
+    border-left:4px solid var(--rood);
+    padding:.35rem 0 .35rem 1.1rem;
+    margin:1.75rem 0;
+    font-size:1.2rem;
+    font-style:italic;
+    color:var(--rood-donker);
+  }
+  .bron{
+    margin-top:2.75rem;
+    padding-top:1.25rem;
+    border-top:1px solid var(--lijn);
+    font-size:.88rem;
+    color:var(--grijs);
+  }
+  nav.terug{max-width:46rem;margin:0 auto;padding:1rem 1.25rem 2.5rem}
+  nav.terug a{color:var(--groen);font-weight:600;text-decoration:none;font-size:.9rem}
+  nav.terug a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="kicker">Het prijsverschil</span>
+  <h1>Waarom kost een aardbei van het veld het dubbele van die in de supermarkt?</h1>
+  <p class="intro">Een bakje Belgische aardbeien kost soms geen 3&nbsp;euro, soms bijna 10. Achter dat verschil zit geen toeval, maar een heel verschillende manier van telen en verkopen.</p>
+</header>
+
+<main>
+<article>
+
+  <figure>
+    <img src="assets/aardbeien-struik.jpg" alt="Verse aardbeien opgehangen tussen de takken van een rozemarijnstruik, versierd met blauwe kralensnoeren" width="720" height="1080">
+    <figcaption>Volle zomer: hét moment voor Belgische aardbeien.</figcaption>
+  </figure>
+
+  <p>Het is volop aardbeienseizoen, en dankzij de zonnige weken zijn de vruchten nu op hun goedkoopst. Toch loopt de prijs van een bakje Belgische aardbeien sterk uiteen, afhankelijk van waar je het koopt. Hoe kan fruit dat in hetzelfde land aan bijna dezelfde plant groeit, zó verschillend geprijsd zijn? Deze pagina zet de belangrijkste verklaringen op een rij, gebaseerd op een reportage van <em>De Standaard</em>.</p>
+
+  <div class="vergelijk">
+    <h3>Aardbeien: supermarkt vs. korte keten</h3>
+    <div class="prijzen">
+      <div class="prijskaart">
+        <div class="winkel">Aldi</div>
+        <div class="type">supermarkt</div>
+        <div class="prijs">4,49</div>
+        <div class="eenheid">euro per 500&nbsp;gram</div>
+        <div class="kilo">8,98</div>
+        <div class="kilo-label">euro per kilo*</div>
+      </div>
+      <div class="prijskaart">
+        <div class="winkel">Veldwinkel Kempengoud</div>
+        <div class="type">bioboerderij, korte keten</div>
+        <div class="prijs">4,50</div>
+        <div class="eenheid">euro per 250&nbsp;gram</div>
+        <div class="kilo">18</div>
+        <div class="kilo-label">euro per kilo*</div>
+      </div>
+    </div>
+    <p class="footnote">*Prijzen genoteerd op 22&nbsp;juni. In omliggende winkels komt er nog een winkelmarge bij; online betaal je vaak ook een servicekost.</p>
+  </div>
+
+  <h2>Serre versus veld</h2>
+  <p>Het grootste deel van de supermarktaardbeien groeit niet in volle grond, maar op verhoogde stellingen met substraat in serres. De investering in zo'n serre is fors, maar daarna is de teelt bijzonder efficiënt: gecontroleerde omstandigheden, een hogere opbrengst en comfortabeler plukwerk. Een biologische veldteler zoals Kempengoud werkt daarentegen verplicht in de grond, mag amper bestrijdingsmiddelen of kunstmest gebruiken en haalt daardoor een veel kleinere oogst van dezelfde oppervlakte.</p>
+
+  <h2>Elk vruchtje door mensenhanden</h2>
+  <p>Of ze nu uit de serre of van het veld komen: aardbeien blijven arbeidsintensief. Elke plant vraagt verzorging en elke vrucht wordt met de hand geplukt en gesorteerd. Bij een kleine bioboerderij weegt die loonkost per kilo zwaarder door dan bij grote telers die met ervaren seizoenarbeiders aan hoog tempo oogsten.</p>
+
+  <figure>
+    <img src="assets/aardbeien-duo.jpg" alt="Twee rijpe aardbeien hangend aan blauwe kralensnoeren tussen groene rozemarijntakken" width="720" height="480">
+    <figcaption>Met de hand geplukt en gesorteerd: dat zie je terug in de prijs.</figcaption>
+  </figure>
+
+  <h2>Minder tussenschakels, niet minder kosten</h2>
+  <p>Je zou verwachten dat rechtstreeks kopen bij de boer goedkoper is: er hoeven toch minder schakels betaald te worden? In de praktijk klopt dat niet automatisch. Kosten voor plantgoed, verpakking, transport en verkoop die een veiling of supermarktketen over duizenden tonnen kan uitsmeren, draagt een kleine producent met een hoevewinkel grotendeels zelf.</p>
+
+  <blockquote>"Onze klanten hechten minder belang aan vorm, maar komen voor de smaak", zegt bioboer Gijs Van den Bleeken.</blockquote>
+
+  <h2>Het hele jaar rond, en de wet van vraag en aanbod</h2>
+  <p>Steeds meer telers laten hun dure serres het hele jaar renderen, ook al lopen de energiekosten voor verwarming en verlichting in de wintermaanden hoog op. In volle zomer groeien de aardbeien daarentegen welig en speelt vraag en aanbod volop: bij een groot aanbod zakken de prijzen. Supermarkten zetten de rode vruchten bovendien geregeld in promotie, zeker rond Moederdag. Een korteketenbedrijf houdt zijn prijs liever het hele seizoen stabiel — en de bioboer die zijn eigen verkoop regelt, houdt naar eigen schatting een gangbaar loon over.</p>
+
+  <p class="bron">Deze pagina is een eigen samenvatting van het artikel <em>"Belgische aardbeien rechtstreeks van het veld kosten dubbel zoveel als een bakje in de supermarkt: hoe komt dat toch?"</em>, De Standaard, 1&nbsp;juli&nbsp;2026 (rubriek Het Prijsverschil). Prijsgegevens uit de bijbehorende prijsvergelijker van 22&nbsp;juni.</p>
+
+</article>
+</main>
+
+<nav class="terug"><a href="index.html">&larr; Terug naar de startpagina</a></nav>
+
+</body>
+</html>
